@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import uuid
 from dataclasses import dataclass, field
-from tkinter import Event, Menu, Misc, ttk, StringVar, messagebox, Frame, Canvas
+from tkinter import Menu, Misc, ttk, messagebox
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from .codeview import CodeView, LexerType
