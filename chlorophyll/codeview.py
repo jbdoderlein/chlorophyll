@@ -117,7 +117,9 @@ class CodeView(Text):
 
     def _create_context_menu(self) -> Menu:
         context_menu = Menu(self, tearoff=0)
-        popup_callback = lambda e: context_menu.tk_popup(e.x_root + 5, e.y_root + 5)
+
+        def popup_callback(e: Event):
+            context_menu.tk_popup(e.x_root + 5, e.y_root + 5)
 
         if self._windowingsystem == "aqua":
             super().bind("<Button-2>", popup_callback)
